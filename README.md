@@ -26,6 +26,10 @@ products are documented as both: `kgateway`, `agentgateway`, `agentregistry` and
 `kagent` each have an enterprise documentation set on docs.solo.io and an open
 source one on its own site. Without it the two would share a tag.
 
+A product that splits one version across separate documentation sets adds that
+set to the tag as well, between the distribution and the version, such as `agentgateway-enterprise-kubernetes-latest`
+and `agentgateway-enterprise-standalone-latest`.
+
 For example:
 
 ```sh
@@ -39,9 +43,20 @@ to script against.
 
 | Product | Distribution | Version | Download |
 | --- | --- | --- | --- |
-| Gloo Mesh Enterprise | enterprise | latest | [gloo-mesh-enterprise-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/gloo-mesh-enterprise-enterprise-latest/gloo-mesh-enterprise-enterprise-latest.pdf) |
+| Agentgateway Enterprise (Kubernetes docs) | enterprise | latest (2026.8.2) | [agentgateway-enterprise-kubernetes-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/agentgateway-enterprise-kubernetes-latest/agentgateway-enterprise-kubernetes-latest.pdf) |
+| Agentgateway Enterprise (Standalone docs) | enterprise | latest (2026.8.2) | [agentgateway-enterprise-standalone-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/agentgateway-enterprise-standalone-latest/agentgateway-enterprise-standalone-latest.pdf) |
+| Agentregistry Enterprise | enterprise | latest (2026.8.0) | [agentregistry-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/agentregistry-enterprise-latest/agentregistry-enterprise-latest.pdf) |
+| Gloo Gateway | enterprise | 1.22.x | [gateway-enterprise-1.22.x.pdf](https://github.com/solo-io/docs-pdfs/releases/download/gateway-enterprise-1.22.x/gateway-enterprise-1.22.x.pdf) |
+| Gloo Mesh Enterprise | enterprise | latest (2.13.x) | [gloo-mesh-enterprise-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/gloo-mesh-enterprise-enterprise-latest/gloo-mesh-enterprise-enterprise-latest.pdf) |
+| Gloo Mesh Gateway | enterprise | latest (2.13.x) | [gloo-mesh-gateway-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/gloo-mesh-gateway-enterprise-latest/gloo-mesh-gateway-enterprise-latest.pdf) |
+| Istio (Solo distribution) | enterprise | 1.30.x | [istio-enterprise-1.30.x.pdf](https://github.com/solo-io/docs-pdfs/releases/download/istio-enterprise-1.30.x/istio-enterprise-1.30.x.pdf) |
+| kagent Enterprise | enterprise | latest (0.5.x) | [kagent-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/kagent-enterprise-latest/kagent-enterprise-latest.pdf) |
+| kgateway Enterprise | enterprise | 2.3.x | [kgateway-enterprise-2.3.x.pdf](https://github.com/solo-io/docs-pdfs/releases/download/kgateway-enterprise-2.3.x/kgateway-enterprise-2.3.x.pdf) |
 
-The [releases page](https://github.com/solo-io/docs-pdfs/releases) is always the complete list.
+The version in parentheses is what `latest` pointed at when this table was last
+updated, on 31 August 2026. The
+[releases page](https://github.com/solo-io/docs-pdfs/releases) is always the
+complete list, and no open source PDFs are published yet.
 
 > [!TIP]
 > A version named `latest` tracks whichever release is currently latest, so its
