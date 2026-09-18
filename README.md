@@ -41,22 +41,31 @@ to script against.
 
 ### Available PDFs
 
-| Product | Distribution | Version | Download |
-| --- | --- | --- | --- |
-| Agentgateway Enterprise (Kubernetes docs) | enterprise | latest (2026.8.2) | [agentgateway-enterprise-kubernetes-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/agentgateway-enterprise-kubernetes-latest/agentgateway-enterprise-kubernetes-latest.pdf) |
-| Agentgateway Enterprise (Standalone docs) | enterprise | latest (2026.8.2) | [agentgateway-enterprise-standalone-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/agentgateway-enterprise-standalone-latest/agentgateway-enterprise-standalone-latest.pdf) |
-| Agentregistry Enterprise | enterprise | latest (2026.8.0) | [agentregistry-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/agentregistry-enterprise-latest/agentregistry-enterprise-latest.pdf) |
-| Gloo Gateway | enterprise | 1.22.x | [gateway-enterprise-1.22.x.pdf](https://github.com/solo-io/docs-pdfs/releases/download/gateway-enterprise-1.22.x/gateway-enterprise-1.22.x.pdf) |
-| Gloo Mesh Enterprise | enterprise | latest (2.13.x) | [gloo-mesh-enterprise-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/gloo-mesh-enterprise-enterprise-latest/gloo-mesh-enterprise-enterprise-latest.pdf) |
-| Gloo Mesh Gateway | enterprise | latest (2.13.x) | [gloo-mesh-gateway-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/gloo-mesh-gateway-enterprise-latest/gloo-mesh-gateway-enterprise-latest.pdf) |
-| Istio (Solo distribution) | enterprise | 1.30.x | [istio-enterprise-1.30.x.pdf](https://github.com/solo-io/docs-pdfs/releases/download/istio-enterprise-1.30.x/istio-enterprise-1.30.x.pdf) |
-| kagent Enterprise | enterprise | latest (0.5.x) | [kagent-enterprise-latest.pdf](https://github.com/solo-io/docs-pdfs/releases/download/kagent-enterprise-latest/kagent-enterprise-latest.pdf) |
-| kgateway Enterprise | enterprise | 2.3.x | [kgateway-enterprise-2.3.x.pdf](https://github.com/solo-io/docs-pdfs/releases/download/kgateway-enterprise-2.3.x/kgateway-enterprise-2.3.x.pdf) |
+Each **Latest** link points at that product's `latest` release, which always
+serves whichever version is current. The links do not name a version number, so
+this table does not go stale as versions ship.
 
-The version in parentheses is what `latest` pointed at when this table was last
-updated, on 31 August 2026. The
-[releases page](https://github.com/solo-io/docs-pdfs/releases) is always the
-complete list, and no open source PDFs are published yet.
+| Product | Enterprise | Open source |
+| --- | --- | --- |
+| Agentgateway (Kubernetes docs) | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/agentgateway-enterprise-kubernetes-latest/agentgateway-enterprise-kubernetes-latest.pdf) | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/agentgateway-oss-kubernetes-latest/agentgateway-oss-kubernetes-latest.pdf) |
+| Agentgateway (Standalone docs) | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/agentgateway-enterprise-standalone-latest/agentgateway-enterprise-standalone-latest.pdf) | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/agentgateway-oss-standalone-latest/agentgateway-oss-standalone-latest.pdf) |
+| Agentregistry | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/agentregistry-enterprise-latest/agentregistry-enterprise-latest.pdf) | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/agentregistry-oss-latest/agentregistry-oss-latest.pdf) |
+| Gloo Gateway | [All versions](https://github.com/solo-io/docs-pdfs/releases?q=gateway) | — |
+| Gloo Mesh Enterprise | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/gloo-mesh-enterprise-enterprise-latest/gloo-mesh-enterprise-enterprise-latest.pdf) | — |
+| Gloo Mesh Gateway | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/gloo-mesh-gateway-enterprise-latest/gloo-mesh-gateway-enterprise-latest.pdf) | — |
+| Istio (Solo distribution) | [All versions](https://github.com/solo-io/docs-pdfs/releases?q=istio) | — |
+| kagent | [All versions](https://github.com/solo-io/docs-pdfs/releases?q=kagent) | [kagent](https://github.com/solo-io/docs-pdfs/releases/download/kagent-oss-kagent-latest/kagent-oss-kagent-latest.pdf), [kmcp](https://github.com/solo-io/docs-pdfs/releases/download/kagent-oss-kmcp-latest/kagent-oss-kmcp-latest.pdf) |
+| kgateway | [All versions](https://github.com/solo-io/docs-pdfs/releases?q=kgateway) | [Latest](https://github.com/solo-io/docs-pdfs/releases/download/kgateway-oss-envoy-latest/kgateway-oss-envoy-latest.pdf) |
+
+An **All versions** cell means that product documents no version tree named
+`latest`, so it has no `latest` release to link. The cell opens a filtered
+releases page instead, where you can pick the version you want. That filter
+matches release titles, so for a product documented as both enterprise and open
+source it shows both.
+
+Most products publish older numbered versions as well. The
+[releases page](https://github.com/solo-io/docs-pdfs/releases) is the complete
+list.
 
 > [!TIP]
 > A version named `latest` tracks whichever release is currently latest, so its
@@ -78,17 +87,7 @@ Which versions publish a PDF is decided by the documentation build that produces
 them. If a version you want is not listed, open an issue here and ask for it. To
 get one right now instead, build it yourself with the steps below.
 
-### Why releases instead of committed files
 
-A PDF is an already-compressed stream, so Git cannot store an updated one as a
-small delta. Committing a nightly rebuild of every product would add its full
-size to the repository history every night, permanently, for files nobody will
-ever want an old revision of. Release assets live outside the Git history, so
-replacing one leaves nothing behind and deleting one actually frees the space.
-
-This is also why there is no archive of past builds. If you need a specific
-historical state of the documentation, build it yourself from the source at that
-point in time.
 
 ## Build a PDF yourself
 
